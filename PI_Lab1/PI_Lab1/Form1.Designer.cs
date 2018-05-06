@@ -41,9 +41,12 @@
             this.btn_menu_edit_swap_left_right = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_menu_edit_filter1 = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_edit_menu_CISS = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_edit_menu_pseudocolouring = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_edit_menu_BW = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_edit_menu_contour = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox_left = new System.Windows.Forms.PictureBox();
             this.pictureBox_right = new System.Windows.Forms.PictureBox();
-            this.btn_edit_menu_pseudocolouring = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_edit_menu_Skeletization = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_left)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_right)).BeginInit();
@@ -94,7 +97,10 @@
             this.btn_menu_edit_swap_left_right,
             this.btn_menu_edit_filter1,
             this.btn_edit_menu_CISS,
-            this.btn_edit_menu_pseudocolouring});
+            this.btn_edit_menu_pseudocolouring,
+            this.btn_edit_menu_BW,
+            this.btn_edit_menu_contour,
+            this.btn_edit_menu_Skeletization});
             this.menu_btn_edit.Name = "menu_btn_edit";
             this.menu_btn_edit.Size = new System.Drawing.Size(39, 20);
             this.menu_btn_edit.Text = "Edit";
@@ -155,6 +161,27 @@
             this.btn_edit_menu_CISS.Text = "Contrast invert and statistic scaling";
             this.btn_edit_menu_CISS.Click += new System.EventHandler(this.btn_edit_menu_CISS_Click);
             // 
+            // btn_edit_menu_pseudocolouring
+            // 
+            this.btn_edit_menu_pseudocolouring.Name = "btn_edit_menu_pseudocolouring";
+            this.btn_edit_menu_pseudocolouring.Size = new System.Drawing.Size(258, 22);
+            this.btn_edit_menu_pseudocolouring.Text = "Pseudocolouring";
+            this.btn_edit_menu_pseudocolouring.Click += new System.EventHandler(this.btn_edit_menu_pseudocolouring_Click);
+            // 
+            // btn_edit_menu_BW
+            // 
+            this.btn_edit_menu_BW.Name = "btn_edit_menu_BW";
+            this.btn_edit_menu_BW.Size = new System.Drawing.Size(258, 22);
+            this.btn_edit_menu_BW.Text = "Black and White";
+            this.btn_edit_menu_BW.Click += new System.EventHandler(this.btn_edit_menu_BW_Click);
+            // 
+            // btn_edit_menu_contour
+            // 
+            this.btn_edit_menu_contour.Name = "btn_edit_menu_contour";
+            this.btn_edit_menu_contour.Size = new System.Drawing.Size(258, 22);
+            this.btn_edit_menu_contour.Text = "Contour";
+            this.btn_edit_menu_contour.Click += new System.EventHandler(this.btn_edit_menu_contour_Click);
+            // 
             // pictureBox_left
             // 
             this.pictureBox_left.Location = new System.Drawing.Point(0, 25);
@@ -171,12 +198,12 @@
             this.pictureBox_right.TabIndex = 2;
             this.pictureBox_right.TabStop = false;
             // 
-            // btn_edit_menu_pseudocolouring
+            // btn_edit_menu_Skeletization
             // 
-            this.btn_edit_menu_pseudocolouring.Name = "btn_edit_menu_pseudocolouring";
-            this.btn_edit_menu_pseudocolouring.Size = new System.Drawing.Size(258, 22);
-            this.btn_edit_menu_pseudocolouring.Text = "Pseudocolouring";
-            this.btn_edit_menu_pseudocolouring.Click += new System.EventHandler(this.btn_edit_menu_pseudocolouring_Click);
+            this.btn_edit_menu_Skeletization.Name = "btn_edit_menu_Skeletization";
+            this.btn_edit_menu_Skeletization.Size = new System.Drawing.Size(258, 22);
+            this.btn_edit_menu_Skeletization.Text = "Skeletization";
+            this.btn_edit_menu_Skeletization.Click += new System.EventHandler(this.btn_edit_menu_Skeletization_Click);
             // 
             // Form1
             // 
@@ -216,6 +243,9 @@
         private System.Windows.Forms.ToolStripMenuItem btn_menu_edit_filter1;
         private System.Windows.Forms.ToolStripMenuItem btn_edit_menu_CISS;
         private System.Windows.Forms.ToolStripMenuItem btn_edit_menu_pseudocolouring;
+        private System.Windows.Forms.ToolStripMenuItem btn_edit_menu_BW;
+        private System.Windows.Forms.ToolStripMenuItem btn_edit_menu_contour;
+        private System.Windows.Forms.ToolStripMenuItem btn_edit_menu_Skeletization;
     }
 }
 

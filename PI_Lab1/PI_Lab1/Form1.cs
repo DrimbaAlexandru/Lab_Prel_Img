@@ -205,5 +205,23 @@ namespace PI_Lab1
             Pseudocolor pc = new Pseudocolor();
             apply_effect( pc );
         }
+
+        private void btn_edit_menu_BW_Click( object sender, EventArgs e )
+        {
+            BlackWhite bw = new BlackWhite();
+            apply_effect( bw );
+        }
+
+        private void btn_edit_menu_contour_Click( object sender, EventArgs e )
+        {
+            Contour contour = new Contour();
+            apply_effect( contour );
+        }
+
+        private void btn_edit_menu_Skeletization_Click( object sender, EventArgs e )
+        {
+            Skeletization skeletization = new Skeletization();
+            apply_effect( skeletization );
+        }
     }
 }
