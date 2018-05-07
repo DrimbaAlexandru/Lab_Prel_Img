@@ -223,5 +223,11 @@ namespace PI_Lab1
             Skeletization skeletization = new Skeletization();
             apply_effect( skeletization );
         }
+
+        private void btn_edit_menu_shrinking_Click( object sender, EventArgs e )
+        {
+            Shrinkening shrink = new Shrinkening();
+            apply_effect( shrink );
+        }
     }
 }

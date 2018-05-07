@@ -57,6 +57,7 @@
     <Compile Include="Effects\InvContScalStat.cs" />
     <Compile Include="Effects\NoEffect.cs" />
     <Compile Include="Effects\Pseudocolor.cs" />
+    <Compile Include="Effects\Shrinkening.cs" />
     <Compile Include="Effects\Skeletization.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
