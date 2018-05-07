@@ -21,7 +21,7 @@ namespace PI_Lab1.Effects
             int object_color = 0;
             Tuple<int, int>[] neighbours = { new Tuple<int, int>( -1, 1 ), new Tuple<int, int>( -1, 0 ), new Tuple<int, int>( -1, -1 ),
                                              new Tuple<int, int>( 0, -1 ), new Tuple<int, int>( 1, -1 ), new Tuple<int, int>( 1, 0 ),
-                                             new Tuple<int, int>( 1, 1 ), new Tuple<int, int>( 0, 1 ), new Tuple<int, int>( 0, 0 ) };
+                                             new Tuple<int, int>( 1, 1 ), new Tuple<int, int>( 0, 1 ) };
             List<Tuple<int, int>> to_remove = new List<Tuple<int, int>>();
             bool modified = true;
             Color pixel;
@@ -41,28 +41,31 @@ namespace PI_Lab1.Effects
                         {
                             nv = 0;
                             nt = 0;
-                            foreach( var neighbour in neighbours )
+                            for( int k = 0; k < neighbours.Length; k++ )
                             {
-                                vi = i + neighbour.Item1;
-                                vj = j + neighbour.Item2;
+                                vi = i + neighbours[ k ].Item1;
+                                vj = j + neighbours[ k ].Item2;
                                 if( ( isInBounds( vi, 0, image.Height ) ) && isInBounds( vj, 0, image.Width ) && image.GetPixel( vj, vi ).R == object_color )
                                 {
                                     nv++;
                                 }
                             }
-                            for( int k = 0; k < neighbours.Length - 1; k++ )
+                            for( int k = 0; k < neighbours.Length; k++ )
                             {
                                 vi = i + neighbours[ k ].Item1;
                                 vj = j + neighbours[ k ].Item2;
                                 color = ( isInBounds( vi, 0, image.Height ) && isInBounds( vj, 0, image.Width ) ) ? image.GetPixel( vj, vi ).R : 255 - object_color;
-                                vi = i + neighbours[ ( k == neighbours.Length - 2 ) ? 0 : k + 1 ].Item1;
-                                vj = j + neighbours[ ( k == neighbours.Length - 2 ) ? 0 : k + 1 ].Item2;
+                                
+                                vi = i + neighbours[ ( k + 1 ) % neighbours.Length ].Item1;
+                                vj = j + neighbours[ ( k + 1 ) % neighbours.Length ].Item2;
                                 other_color = ( isInBounds( vi, 0, image.Height ) && isInBounds( vj, 0, image.Width ) ) ? image.GetPixel( vj, vi ).R : 255 - object_color;
-                                nt += ( ( color == 255 - object_color ) && ( other_color == object_color ) ) ? 1 : 0;
+
+                                nt += ( color!=other_color ) ? 1 : 0;
                             }
-                            if( 2 <= nv && nv <= 6 && nt == 1 )
+                            if( 2 <= nv && nv <= 6 && nt == 2 )
                             {
                                 to_remove.Add( new Tuple<int, int>( j, i ) );
+                                //image.SetPixel( j,i, Color.FromArgb( 255 - object_color, 255 - object_color, 255 - object_color ) );
                                 modified = true;
                             }
                         }
