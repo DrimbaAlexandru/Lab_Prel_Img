@@ -129,7 +129,7 @@ namespace PI_Lab1
             }
             catch( Exception e )
             {
-                MessageBox.Show( e.Message );
+                MessageBox.Show( e.Message + "\n" + e.StackTrace );
             }
         }
 
@@ -184,7 +184,7 @@ namespace PI_Lab1
             }
             catch( Exception exc )
             {
-                MessageBox.Show( exc.Message );
+                MessageBox.Show( exc.Message + "\n" + exc.StackTrace );
             }
         }
 
@@ -239,6 +239,13 @@ namespace PI_Lab1
             OilPainting_GUI op = new OilPainting_GUI();
             op.ShowDialog();
             apply_effect( op.getPreparedEffect() );
+        }
+
+        private void btn_menu_drunk_vision_Click( object sender, EventArgs e )
+        {
+            DrunkVision_GUI dv = new DrunkVision_GUI();
+            dv.ShowDialog();
+            apply_effect( dv.getPreparedEffect() );
         }
     }
 }

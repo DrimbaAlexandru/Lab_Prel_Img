@@ -46,9 +46,10 @@
             this.btn_edit_menu_contour = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_edit_menu_Skeletization = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_edit_menu_shrinking = new System.Windows.Forms.ToolStripMenuItem();
+            this.oilPaintingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox_left = new System.Windows.Forms.PictureBox();
             this.pictureBox_right = new System.Windows.Forms.PictureBox();
-            this.oilPaintingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_menu_drunk_vision = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_left)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_right)).BeginInit();
@@ -104,7 +105,8 @@
             this.btn_edit_menu_contour,
             this.btn_edit_menu_Skeletization,
             this.btn_edit_menu_shrinking,
-            this.oilPaintingToolStripMenuItem});
+            this.oilPaintingToolStripMenuItem,
+            this.btn_menu_drunk_vision});
             this.menu_btn_edit.Name = "menu_btn_edit";
             this.menu_btn_edit.Size = new System.Drawing.Size(39, 20);
             this.menu_btn_edit.Text = "Edit";
@@ -200,6 +202,13 @@
             this.btn_edit_menu_shrinking.Text = "Thining";
             this.btn_edit_menu_shrinking.Click += new System.EventHandler(this.btn_edit_menu_shrinking_Click);
             // 
+            // oilPaintingToolStripMenuItem
+            // 
+            this.oilPaintingToolStripMenuItem.Name = "oilPaintingToolStripMenuItem";
+            this.oilPaintingToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.oilPaintingToolStripMenuItem.Text = "Oil Painting";
+            this.oilPaintingToolStripMenuItem.Click += new System.EventHandler(this.btn_edit_menu_oilPainting_click);
+            // 
             // pictureBox_left
             // 
             this.pictureBox_left.Location = new System.Drawing.Point(0, 25);
@@ -216,12 +225,12 @@
             this.pictureBox_right.TabIndex = 2;
             this.pictureBox_right.TabStop = false;
             // 
-            // oilPaintingToolStripMenuItem
+            // btn_menu_drunk_vision
             // 
-            this.oilPaintingToolStripMenuItem.Name = "oilPaintingToolStripMenuItem";
-            this.oilPaintingToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
-            this.oilPaintingToolStripMenuItem.Text = "Oil Painting";
-            this.oilPaintingToolStripMenuItem.Click += new System.EventHandler(this.btn_edit_menu_oilPainting_click);
+            this.btn_menu_drunk_vision.Name = "btn_menu_drunk_vision";
+            this.btn_menu_drunk_vision.Size = new System.Drawing.Size(258, 22);
+            this.btn_menu_drunk_vision.Text = "Drunk Vision";
+            this.btn_menu_drunk_vision.Click += new System.EventHandler(this.btn_menu_drunk_vision_Click);
             // 
             // Form1
             // 
@@ -266,6 +275,7 @@
         private System.Windows.Forms.ToolStripMenuItem btn_edit_menu_Skeletization;
         private System.Windows.Forms.ToolStripMenuItem btn_edit_menu_shrinking;
         private System.Windows.Forms.ToolStripMenuItem oilPaintingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem btn_menu_drunk_vision;
     }
 }
 
