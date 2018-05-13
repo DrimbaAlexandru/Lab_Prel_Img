@@ -1,4 +1,5 @@
 ﻿using PI_Lab1.Effects;
+using PI_Lab1.EffectWithGUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -69,7 +70,9 @@ namespace PI_Lab1
 
         private void btn_edit_grayscale_Click( object sender, EventArgs e )
         {
-            apply_effect( new Grayscale() );
+            Grayscale_GUI gui = new Grayscale_GUI();
+            gui.ShowDialog();
+            apply_effect( gui.getPreparedEffect() );
         }
 
         private void refresh_left()
@@ -113,6 +116,8 @@ namespace PI_Lab1
 
         private void apply_effect( IEffect effect )
         {
+            if( effect == null )
+                return;
             try
             {
                 if( right_image == null )
@@ -124,7 +129,7 @@ namespace PI_Lab1
             }
             catch( Exception e )
             {
-                MessageBox.Show( e.StackTrace );
+                MessageBox.Show( e.Message );
             }
         }
 
@@ -167,7 +172,6 @@ namespace PI_Lab1
             {
                 MessageBox.Show( exc.Message );
             }
-
         }
 
         private void btn_menu_edit_swap_left_right_Click( object sender, EventArgs e )
@@ -220,14 +224,21 @@ namespace PI_Lab1
 
         private void btn_edit_menu_Skeletization_Click( object sender, EventArgs e )
         {
-            Skeletization skeletization = new Skeletization();
+            Skeletonize skeletization = new Skeletonize();
             apply_effect( skeletization );
         }
 
         private void btn_edit_menu_shrinking_Click( object sender, EventArgs e )
         {
-            Shrinkening shrink = new Shrinkening();
+            Thin shrink = new Thin();
             apply_effect( shrink );
+        }
+
+        private void btn_edit_menu_oilPainting_click( object sender, EventArgs e )
+        {
+            OilPainting_GUI op = new OilPainting_GUI();
+            op.ShowDialog();
+            apply_effect( op.getPreparedEffect() );
         }
     }
 }

@@ -56,9 +56,23 @@
     <Compile Include="Effects\ImageSubstraction.cs" />
     <Compile Include="Effects\InvContScalStat.cs" />
     <Compile Include="Effects\NoEffect.cs" />
+    <Compile Include="Effects\OilPainting.cs" />
     <Compile Include="Effects\Pseudocolor.cs" />
     <Compile Include="Effects\Shrinkening.cs" />
     <Compile Include="Effects\Skeletization.cs" />
+    <Compile Include="EffectWithGUI\EffectWithGUI.cs" />
+    <Compile Include="EffectWithGUI\Grayscale_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EffectWithGUI\Grayscale_GUI.Designer.cs">
+      <DependentUpon>Grayscale_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EffectWithGUI\OilPainting_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EffectWithGUI\OilPainting_GUI.Designer.cs">
+      <DependentUpon>OilPainting_GUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +81,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EffectWithGUI\Grayscale_GUI.resx">
+      <DependentUpon>Grayscale_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EffectWithGUI\OilPainting_GUI.resx">
+      <DependentUpon>OilPainting_GUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

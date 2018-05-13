@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PI_Lab1.Effects
 {
-    class Skeletization : IEffect
+    class Skeletonize : IEffect
     {
         private bool isLocalMaximum( int[ , ] mat, int i, int j )
         {

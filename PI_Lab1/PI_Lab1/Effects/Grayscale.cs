@@ -10,6 +10,7 @@ namespace PI_Lab1.Effects
     class Grayscale : IEffect
     {
         private double r_comp = 1, g_comp = 1, b_comp = 1;
+
         public void apply( Bitmap image )
         {
             int i, j;
@@ -25,6 +26,16 @@ namespace PI_Lab1.Effects
                     image.SetPixel( j, i, newColor );
                 }
             }
+        }
+
+        public void setRGBcoeffs( double r, double g, double b) 
+        {
+            if( r + g + b <= 0 || r < 0 || g < 0 || b < 0 )
+                throw new ImageProcessingException( "Invalid parameters" );
+
+            r_comp = r;
+            g_comp = g;
+            b_comp = b;
         }
     }
 }

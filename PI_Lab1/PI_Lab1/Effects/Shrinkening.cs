@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PI_Lab1.Effects
 {
-    class Shrinkening : IEffect
+    class Thin : IEffect
     {
         private bool isInBounds( int val, int ll, int ul )
         {
