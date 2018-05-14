@@ -247,5 +247,12 @@ namespace PI_Lab1
             dv.ShowDialog();
             apply_effect( dv.getPreparedEffect() );
         }
+
+        private void btn_menu_edit_mirror_Click( object sender, EventArgs e )
+        {
+            Mirror_GUI m = new Mirror_GUI();
+            m.ShowDialog();
+            apply_effect( m.getPreparedEffect() );
+        }
     }
 }
