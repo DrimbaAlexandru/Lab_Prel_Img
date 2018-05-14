@@ -254,5 +254,17 @@ namespace PI_Lab1
             m.ShowDialog();
             apply_effect( m.getPreparedEffect() );
         }
+
+        private void scatteredTilesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pixelateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Pixelate_GUI p = new Pixelate_GUI(right_image);
+            p.ShowDialog();
+            apply_effect(p.getPreparedEffect());
+        }
     }
 }

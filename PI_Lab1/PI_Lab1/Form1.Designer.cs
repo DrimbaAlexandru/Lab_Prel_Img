@@ -34,8 +34,6 @@
             this.menu_file_save = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_btn_edit = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_edit_grayscale = new System.Windows.Forms.ToolStripMenuItem();
-            this.btn_menu_edit_contrast_compression = new System.Windows.Forms.ToolStripMenuItem();
-            this.btn_menu_edit_imageSubstract = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_menu_edit_left_to_right = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_menu_edit_btn_right_to_left = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_menu_edit_swap_left_right = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,9 +46,11 @@
             this.btn_edit_menu_shrinking = new System.Windows.Forms.ToolStripMenuItem();
             this.oilPaintingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_menu_drunk_vision = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_menu_edit_mirror = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox_left = new System.Windows.Forms.PictureBox();
             this.pictureBox_right = new System.Windows.Forms.PictureBox();
-            this.btn_menu_edit_mirror = new System.Windows.Forms.ToolStripMenuItem();
+            this.scatteredTilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pixelateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_left)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_right)).BeginInit();
@@ -94,8 +94,6 @@
             // 
             this.menu_btn_edit.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btn_edit_grayscale,
-            this.btn_menu_edit_contrast_compression,
-            this.btn_menu_edit_imageSubstract,
             this.btn_menu_edit_left_to_right,
             this.btn_menu_edit_btn_right_to_left,
             this.btn_menu_edit_swap_left_right,
@@ -108,7 +106,9 @@
             this.btn_edit_menu_shrinking,
             this.oilPaintingToolStripMenuItem,
             this.btn_menu_drunk_vision,
-            this.btn_menu_edit_mirror});
+            this.btn_menu_edit_mirror,
+            this.scatteredTilesToolStripMenuItem,
+            this.pixelateToolStripMenuItem});
             this.menu_btn_edit.Name = "menu_btn_edit";
             this.menu_btn_edit.Size = new System.Drawing.Size(39, 20);
             this.menu_btn_edit.Text = "Edit";
@@ -119,20 +119,6 @@
             this.btn_edit_grayscale.Size = new System.Drawing.Size(258, 22);
             this.btn_edit_grayscale.Text = "Grayscale";
             this.btn_edit_grayscale.Click += new System.EventHandler(this.btn_edit_grayscale_Click);
-            // 
-            // btn_menu_edit_contrast_compression
-            // 
-            this.btn_menu_edit_contrast_compression.Name = "btn_menu_edit_contrast_compression";
-            this.btn_menu_edit_contrast_compression.Size = new System.Drawing.Size(258, 22);
-            this.btn_menu_edit_contrast_compression.Text = "Contrast compression";
-            this.btn_menu_edit_contrast_compression.Click += new System.EventHandler(this.btn_menu_edit_contrast_compression_Click);
-            // 
-            // btn_menu_edit_imageSubstract
-            // 
-            this.btn_menu_edit_imageSubstract.Name = "btn_menu_edit_imageSubstract";
-            this.btn_menu_edit_imageSubstract.Size = new System.Drawing.Size(258, 22);
-            this.btn_menu_edit_imageSubstract.Text = "Image substract ( B - A )";
-            this.btn_menu_edit_imageSubstract.Click += new System.EventHandler(this.btn_menu_edit_imageSubstract_Click);
             // 
             // btn_menu_edit_left_to_right
             // 
@@ -218,6 +204,13 @@
             this.btn_menu_drunk_vision.Text = "Drunk Vision";
             this.btn_menu_drunk_vision.Click += new System.EventHandler(this.btn_menu_drunk_vision_Click);
             // 
+            // btn_menu_edit_mirror
+            // 
+            this.btn_menu_edit_mirror.Name = "btn_menu_edit_mirror";
+            this.btn_menu_edit_mirror.Size = new System.Drawing.Size(258, 22);
+            this.btn_menu_edit_mirror.Text = "Mirror";
+            this.btn_menu_edit_mirror.Click += new System.EventHandler(this.btn_menu_edit_mirror_Click);
+            // 
             // pictureBox_left
             // 
             this.pictureBox_left.Location = new System.Drawing.Point(0, 25);
@@ -234,12 +227,19 @@
             this.pictureBox_right.TabIndex = 2;
             this.pictureBox_right.TabStop = false;
             // 
-            // btn_menu_edit_mirror
+            // scatteredTilesToolStripMenuItem
             // 
-            this.btn_menu_edit_mirror.Name = "btn_menu_edit_mirror";
-            this.btn_menu_edit_mirror.Size = new System.Drawing.Size(258, 22);
-            this.btn_menu_edit_mirror.Text = "Mirror";
-            this.btn_menu_edit_mirror.Click += new System.EventHandler(this.btn_menu_edit_mirror_Click);
+            this.scatteredTilesToolStripMenuItem.Name = "scatteredTilesToolStripMenuItem";
+            this.scatteredTilesToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.scatteredTilesToolStripMenuItem.Text = "Scattered Tiles";
+            this.scatteredTilesToolStripMenuItem.Click += new System.EventHandler(this.scatteredTilesToolStripMenuItem_Click);
+            // 
+            // pixelateToolStripMenuItem
+            // 
+            this.pixelateToolStripMenuItem.Name = "pixelateToolStripMenuItem";
+            this.pixelateToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.pixelateToolStripMenuItem.Text = "Pixelate";
+            this.pixelateToolStripMenuItem.Click += new System.EventHandler(this.pixelateToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -271,8 +271,6 @@
         private System.Windows.Forms.ToolStripMenuItem menu_file_load;
         private System.Windows.Forms.ToolStripMenuItem menu_file_save;
         private System.Windows.Forms.ToolStripMenuItem btn_edit_grayscale;
-        private System.Windows.Forms.ToolStripMenuItem btn_menu_edit_contrast_compression;
-        private System.Windows.Forms.ToolStripMenuItem btn_menu_edit_imageSubstract;
         private System.Windows.Forms.ToolStripMenuItem btn_menu_edit_left_to_right;
         private System.Windows.Forms.ToolStripMenuItem btn_menu_edit_btn_right_to_left;
         private System.Windows.Forms.ToolStripMenuItem btn_menu_edit_swap_left_right;
@@ -286,6 +284,8 @@
         private System.Windows.Forms.ToolStripMenuItem oilPaintingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem btn_menu_drunk_vision;
         private System.Windows.Forms.ToolStripMenuItem btn_menu_edit_mirror;
+        private System.Windows.Forms.ToolStripMenuItem scatteredTilesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pixelateToolStripMenuItem;
     }
 }
 
