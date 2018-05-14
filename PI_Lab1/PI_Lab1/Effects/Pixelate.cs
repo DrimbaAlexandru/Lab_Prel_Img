@@ -9,41 +9,57 @@ namespace PI_Lab1.Effects
 {
     class Pixelate : IEffect
     {
-        Rectangle rectangle;
         Int32 pixelateSize;
 
-        public void setParameters(Rectangle rectangle, Int32 pixelateSize)
+        public void setParameters( Int32 pixelateSize )
         {
-            this.rectangle = rectangle;
             this.pixelateSize = pixelateSize;
         }
 
-        public void apply(Bitmap image)
+        public void apply( Bitmap image )
         {
-            Bitmap pixelated = (Bitmap)image.Clone();
-            
-            for (Int32 xx = rectangle.X; xx < rectangle.X + rectangle.Width && xx < image.Width; xx += pixelateSize)
+            int i, j, vi, vj;
+            Bitmap pixelated = ( Bitmap )image.Clone();
+            Int32 r, g, b;
+            int cnt_x, cnt_y;
+            Color p;
+
+            for( i = 0; i < image.Height; i += pixelateSize )
             {
-                for (Int32 yy = rectangle.Y; yy < rectangle.Y + rectangle.Height && yy < image.Height; yy += pixelateSize)
+                for( j = 0; j < image.Width; j += pixelateSize )
                 {
-                    Int32 offsetX = pixelateSize / 2;
-                    Int32 offsetY = pixelateSize / 2;
-                    
-                    while (xx + offsetX >= image.Width) offsetX--;
-                    while (yy + offsetY >= image.Height) offsetY--;
-                    
-                    Color pixel = pixelated.GetPixel(xx + offsetX, yy + offsetY);
-                    
-                    for (Int32 x = xx; x < xx + pixelateSize && x < image.Width; x++)
-                        for (Int32 y = yy; y < yy + pixelateSize && y < image.Height; y++)
-                            pixelated.SetPixel(x, y, pixel);
+                    r = g = b = 0;
+                    cnt_x = Math.Min( pixelateSize, image.Width - j );
+                    cnt_y = Math.Min( pixelateSize, image.Height - i );
+                    for( vi = i; vi < cnt_y + i; vi++ )
+                    {
+                        for( vj = j; vj < j + cnt_x; vj++ )
+                        {
+                            p = image.GetPixel( vj, vi );
+                            r += p.R;
+                            g += p.G;
+                            b += p.B;
+                        }
+                    }
+                    r /= cnt_x * cnt_y;
+                    g /= cnt_x * cnt_y;
+                    b /= cnt_x * cnt_y;
+                    p = Color.FromArgb( r, g, b );
+                    for( vi = i; vi < cnt_y + i; vi++ )
+                    {
+                        for( vj = j; vj < j + cnt_x; vj++ )
+                        {
+                            pixelated.SetPixel( vj, vi, p );
+                        }
+                    }
                 }
             }
-            for (int i = 0; i < image.Height; i++)
+
+            for( i = 0; i < image.Height; i++ )
             {
-                for (int j = 0; j < image.Width; j++)
+                for( j = 0; j < image.Width; j++ )
                 {
-                    image.SetPixel(j, i, pixelated.GetPixel(j, i));
+                    image.SetPixel( j, i, pixelated.GetPixel( j, i ) );
                 }
             }
         }

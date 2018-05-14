@@ -260,11 +260,11 @@ namespace PI_Lab1
             
         }
 
-        private void pixelateToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btn_edit_menu_pixelate_Click( object sender, EventArgs e )
         {
-            Pixelate_GUI p = new Pixelate_GUI(right_image);
+            Pixelate_GUI p = new Pixelate_GUI();
             p.ShowDialog();
-            apply_effect(p.getPreparedEffect());
+            apply_effect( p.getPreparedEffect() );
         }
     }
 }

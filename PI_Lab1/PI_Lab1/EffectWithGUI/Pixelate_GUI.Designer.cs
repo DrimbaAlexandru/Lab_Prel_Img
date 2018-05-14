@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.tb_pixel_size = new System.Windows.Forms.TrackBar();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            this.lbl_size = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.tb_pixel_size)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -43,15 +44,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Pixel size";
             // 
-            // trackBar1
+            // tb_pixel_size
             // 
-            this.trackBar1.Location = new System.Drawing.Point(66, 55);
-            this.trackBar1.Maximum = 255;
-            this.trackBar1.Minimum = 1;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(206, 45);
-            this.trackBar1.TabIndex = 1;
-            this.trackBar1.Value = 25;
+            this.tb_pixel_size.Location = new System.Drawing.Point(66, 55);
+            this.tb_pixel_size.Maximum = 255;
+            this.tb_pixel_size.Minimum = 1;
+            this.tb_pixel_size.Name = "tb_pixel_size";
+            this.tb_pixel_size.Size = new System.Drawing.Size(176, 45);
+            this.tb_pixel_size.TabIndex = 1;
+            this.tb_pixel_size.Value = 25;
+            this.tb_pixel_size.ValueChanged += new System.EventHandler(this.onScrollValueChanged);
             // 
             // button1
             // 
@@ -63,17 +65,27 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // lbl_size
+            // 
+            this.lbl_size.AutoSize = true;
+            this.lbl_size.Location = new System.Drawing.Point(249, 64);
+            this.lbl_size.Name = "lbl_size";
+            this.lbl_size.Size = new System.Drawing.Size(29, 13);
+            this.lbl_size.TabIndex = 3;
+            this.lbl_size.Text = "NaN";
+            // 
             // Pixelate_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 176);
+            this.ClientSize = new System.Drawing.Size(291, 176);
+            this.Controls.Add(this.lbl_size);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.trackBar1);
+            this.Controls.Add(this.tb_pixel_size);
             this.Controls.Add(this.label1);
             this.Name = "Pixelate_GUI";
             this.Text = "Pixelate_GUI";
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tb_pixel_size)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -82,7 +94,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.TrackBar tb_pixel_size;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lbl_size;
     }
 }

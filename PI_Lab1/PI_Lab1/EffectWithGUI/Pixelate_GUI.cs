@@ -15,13 +15,10 @@ namespace PI_Lab1.EffectWithGUI
     {
         private int pixelSize = 1;
         private Pixelate effect = null;
-        private int imageWidth = 0, imageHeight = 0;
 
-        public Pixelate_GUI(Bitmap image)
+        public Pixelate_GUI()
         {
             InitializeComponent();
-            imageHeight = image.Height;
-            imageWidth = image.Width;
             onScrollValueChanged(null, null);
         }
 
@@ -32,13 +29,14 @@ namespace PI_Lab1.EffectWithGUI
 
         private void onScrollValueChanged(object sender, EventArgs e)
         {
-            pixelSize = trackBar1.Value;
+            pixelSize = tb_pixel_size.Value;
+            lbl_size.Text = pixelSize.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             effect = new Pixelate();
-            effect.setParameters(new Rectangle(0, 0, imageWidth, imageHeight), pixelSize);
+            effect.setParameters( pixelSize );
             this.Close();
         }
     }
