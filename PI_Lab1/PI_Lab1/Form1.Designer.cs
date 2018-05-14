@@ -37,20 +37,14 @@
             this.btn_menu_edit_left_to_right = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_menu_edit_btn_right_to_left = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_menu_edit_swap_left_right = new System.Windows.Forms.ToolStripMenuItem();
-            this.btn_menu_edit_filter1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.btn_edit_menu_CISS = new System.Windows.Forms.ToolStripMenuItem();
-            this.btn_edit_menu_pseudocolouring = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_edit_menu_BW = new System.Windows.Forms.ToolStripMenuItem();
-            this.btn_edit_menu_contour = new System.Windows.Forms.ToolStripMenuItem();
-            this.btn_edit_menu_Skeletization = new System.Windows.Forms.ToolStripMenuItem();
-            this.btn_edit_menu_shrinking = new System.Windows.Forms.ToolStripMenuItem();
             this.oilPaintingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_menu_drunk_vision = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_menu_edit_mirror = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox_left = new System.Windows.Forms.PictureBox();
-            this.pictureBox_right = new System.Windows.Forms.PictureBox();
             this.scatteredTilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pixelateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox_left = new System.Windows.Forms.PictureBox();
+            this.pictureBox_right = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_left)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_right)).BeginInit();
@@ -97,13 +91,8 @@
             this.btn_menu_edit_left_to_right,
             this.btn_menu_edit_btn_right_to_left,
             this.btn_menu_edit_swap_left_right,
-            this.btn_menu_edit_filter1,
-            this.btn_edit_menu_CISS,
-            this.btn_edit_menu_pseudocolouring,
+            this.btn_edit_grayscale,
             this.btn_edit_menu_BW,
-            this.btn_edit_menu_contour,
-            this.btn_edit_menu_Skeletization,
-            this.btn_edit_menu_shrinking,
             this.oilPaintingToolStripMenuItem,
             this.btn_menu_drunk_vision,
             this.btn_menu_edit_mirror,
@@ -116,91 +105,49 @@
             // btn_edit_grayscale
             // 
             this.btn_edit_grayscale.Name = "btn_edit_grayscale";
-            this.btn_edit_grayscale.Size = new System.Drawing.Size(258, 22);
+            this.btn_edit_grayscale.Size = new System.Drawing.Size(159, 22);
             this.btn_edit_grayscale.Text = "Grayscale";
             this.btn_edit_grayscale.Click += new System.EventHandler(this.btn_edit_grayscale_Click);
             // 
             // btn_menu_edit_left_to_right
             // 
             this.btn_menu_edit_left_to_right.Name = "btn_menu_edit_left_to_right";
-            this.btn_menu_edit_left_to_right.Size = new System.Drawing.Size(258, 22);
+            this.btn_menu_edit_left_to_right.Size = new System.Drawing.Size(159, 22);
             this.btn_menu_edit_left_to_right.Text = "Left->Right";
             this.btn_menu_edit_left_to_right.Click += new System.EventHandler(this.btn_menu_edit_left_to_right_Click);
             // 
             // btn_menu_edit_btn_right_to_left
             // 
             this.btn_menu_edit_btn_right_to_left.Name = "btn_menu_edit_btn_right_to_left";
-            this.btn_menu_edit_btn_right_to_left.Size = new System.Drawing.Size(258, 22);
+            this.btn_menu_edit_btn_right_to_left.Size = new System.Drawing.Size(159, 22);
             this.btn_menu_edit_btn_right_to_left.Text = "Left<-Right";
             this.btn_menu_edit_btn_right_to_left.Click += new System.EventHandler(this.btn_menu_edit_btn_right_to_left_Click);
             // 
             // btn_menu_edit_swap_left_right
             // 
             this.btn_menu_edit_swap_left_right.Name = "btn_menu_edit_swap_left_right";
-            this.btn_menu_edit_swap_left_right.Size = new System.Drawing.Size(258, 22);
+            this.btn_menu_edit_swap_left_right.Size = new System.Drawing.Size(159, 22);
             this.btn_menu_edit_swap_left_right.Text = "Left<->Right";
             this.btn_menu_edit_swap_left_right.Click += new System.EventHandler(this.btn_menu_edit_swap_left_right_Click);
-            // 
-            // btn_menu_edit_filter1
-            // 
-            this.btn_menu_edit_filter1.Name = "btn_menu_edit_filter1";
-            this.btn_menu_edit_filter1.Size = new System.Drawing.Size(258, 22);
-            this.btn_menu_edit_filter1.Text = "Directional Filter";
-            this.btn_menu_edit_filter1.Click += new System.EventHandler(this.btn_menu_edit_filter1_Click);
-            // 
-            // btn_edit_menu_CISS
-            // 
-            this.btn_edit_menu_CISS.Name = "btn_edit_menu_CISS";
-            this.btn_edit_menu_CISS.Size = new System.Drawing.Size(258, 22);
-            this.btn_edit_menu_CISS.Text = "Contrast invert and statistic scaling";
-            this.btn_edit_menu_CISS.Click += new System.EventHandler(this.btn_edit_menu_CISS_Click);
-            // 
-            // btn_edit_menu_pseudocolouring
-            // 
-            this.btn_edit_menu_pseudocolouring.Name = "btn_edit_menu_pseudocolouring";
-            this.btn_edit_menu_pseudocolouring.Size = new System.Drawing.Size(258, 22);
-            this.btn_edit_menu_pseudocolouring.Text = "Pseudocolouring";
-            this.btn_edit_menu_pseudocolouring.Click += new System.EventHandler(this.btn_edit_menu_pseudocolouring_Click);
             // 
             // btn_edit_menu_BW
             // 
             this.btn_edit_menu_BW.Name = "btn_edit_menu_BW";
-            this.btn_edit_menu_BW.Size = new System.Drawing.Size(258, 22);
+            this.btn_edit_menu_BW.Size = new System.Drawing.Size(159, 22);
             this.btn_edit_menu_BW.Text = "Black and White";
             this.btn_edit_menu_BW.Click += new System.EventHandler(this.btn_edit_menu_BW_Click);
-            // 
-            // btn_edit_menu_contour
-            // 
-            this.btn_edit_menu_contour.Name = "btn_edit_menu_contour";
-            this.btn_edit_menu_contour.Size = new System.Drawing.Size(258, 22);
-            this.btn_edit_menu_contour.Text = "Contour";
-            this.btn_edit_menu_contour.Click += new System.EventHandler(this.btn_edit_menu_contour_Click);
-            // 
-            // btn_edit_menu_Skeletization
-            // 
-            this.btn_edit_menu_Skeletization.Name = "btn_edit_menu_Skeletization";
-            this.btn_edit_menu_Skeletization.Size = new System.Drawing.Size(258, 22);
-            this.btn_edit_menu_Skeletization.Text = "Skeletonize";
-            this.btn_edit_menu_Skeletization.Click += new System.EventHandler(this.btn_edit_menu_Skeletization_Click);
-            // 
-            // btn_edit_menu_shrinking
-            // 
-            this.btn_edit_menu_shrinking.Name = "btn_edit_menu_shrinking";
-            this.btn_edit_menu_shrinking.Size = new System.Drawing.Size(258, 22);
-            this.btn_edit_menu_shrinking.Text = "Thining";
-            this.btn_edit_menu_shrinking.Click += new System.EventHandler(this.btn_edit_menu_shrinking_Click);
             // 
             // oilPaintingToolStripMenuItem
             // 
             this.oilPaintingToolStripMenuItem.Name = "oilPaintingToolStripMenuItem";
-            this.oilPaintingToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.oilPaintingToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.oilPaintingToolStripMenuItem.Text = "Oil Painting";
             this.oilPaintingToolStripMenuItem.Click += new System.EventHandler(this.btn_edit_menu_oilPainting_click);
             // 
             // btn_menu_drunk_vision
             // 
             this.btn_menu_drunk_vision.Name = "btn_menu_drunk_vision";
-            this.btn_menu_drunk_vision.Size = new System.Drawing.Size(258, 22);
+            this.btn_menu_drunk_vision.Size = new System.Drawing.Size(159, 22);
             this.btn_menu_drunk_vision.Text = "Drunk Vision";
             this.btn_menu_drunk_vision.Click += new System.EventHandler(this.btn_menu_drunk_vision_Click);
             // 
@@ -210,6 +157,22 @@
             this.btn_menu_edit_mirror.Size = new System.Drawing.Size(258, 22);
             this.btn_menu_edit_mirror.Text = "Mirror";
             this.btn_menu_edit_mirror.Click += new System.EventHandler(this.btn_menu_edit_mirror_Click);
+            // 
+            this.btn_menu_edit_mirror.Click += new System.EventHandler(this.btn_menu_edit_mirror_Click);
+            // 
+            // scatteredTilesToolStripMenuItem
+            // 
+            this.scatteredTilesToolStripMenuItem.Name = "scatteredTilesToolStripMenuItem";
+            this.scatteredTilesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.scatteredTilesToolStripMenuItem.Text = "Scattered Tiles";
+            this.scatteredTilesToolStripMenuItem.Click += new System.EventHandler(this.scatteredTilesToolStripMenuItem_Click);
+            // 
+            // pixelateToolStripMenuItem
+            // 
+            this.pixelateToolStripMenuItem.Name = "pixelateToolStripMenuItem";
+            this.pixelateToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.pixelateToolStripMenuItem.Text = "Pixelate";
+            this.pixelateToolStripMenuItem.Click += new System.EventHandler(this.pixelateToolStripMenuItem_Click);
             // 
             // pictureBox_left
             // 
@@ -274,13 +237,7 @@
         private System.Windows.Forms.ToolStripMenuItem btn_menu_edit_left_to_right;
         private System.Windows.Forms.ToolStripMenuItem btn_menu_edit_btn_right_to_left;
         private System.Windows.Forms.ToolStripMenuItem btn_menu_edit_swap_left_right;
-        private System.Windows.Forms.ToolStripMenuItem btn_menu_edit_filter1;
-        private System.Windows.Forms.ToolStripMenuItem btn_edit_menu_CISS;
-        private System.Windows.Forms.ToolStripMenuItem btn_edit_menu_pseudocolouring;
         private System.Windows.Forms.ToolStripMenuItem btn_edit_menu_BW;
-        private System.Windows.Forms.ToolStripMenuItem btn_edit_menu_contour;
-        private System.Windows.Forms.ToolStripMenuItem btn_edit_menu_Skeletization;
-        private System.Windows.Forms.ToolStripMenuItem btn_edit_menu_shrinking;
         private System.Windows.Forms.ToolStripMenuItem oilPaintingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem btn_menu_drunk_vision;
         private System.Windows.Forms.ToolStripMenuItem btn_menu_edit_mirror;
