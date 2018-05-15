@@ -29,8 +29,9 @@ namespace PI_Lab1.Effects
         public Color getColor( Bitmap image, double x, double y )
         {
             Color tl, tr, bl, br;
-            double x_prop = 1.0 - ( x - ( int )x );
-            double y_prop = 1.0 - ( y - ( int )y );
+            double x_prop = 1.0 - ( x - Math.Floor( x ) );
+            double y_prop = 1.0 - ( y - Math.Floor( y ) );
+
             int r, g, b;
 
             tl = image.GetPixel( limit( ( int )x, 0, image.Width ), limit( ( int )y, 0, image.Height ) );
