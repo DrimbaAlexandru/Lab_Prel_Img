@@ -49,13 +49,17 @@
     <Compile Include="Effects\Contour.cs" />
     <Compile Include="Effects\Contour_Traversal.cs" />
     <Compile Include="Effects\ContrastCompression.cs" />
+    <Compile Include="Effects\Deschidere.cs" />
+    <Compile Include="Effects\Dilatation.cs" />
     <Compile Include="Effects\DirectionalFilter.cs" />
     <Compile Include="Effects\DrunkVision.cs" />
+    <Compile Include="Effects\Erosion.cs" />
     <Compile Include="Effects\Filter.cs" />
     <Compile Include="Effects\Grayscale.cs" />
     <Compile Include="Effects\IEffect.cs" />
     <Compile Include="Effects\ImageProcessingException.cs" />
     <Compile Include="Effects\ImageSubstraction.cs" />
+    <Compile Include="Effects\Inchidere.cs" />
     <Compile Include="Effects\InvContScalStat.cs" />
     <Compile Include="Effects\Mirror.cs" />
     <Compile Include="Effects\NoEffect.cs" />

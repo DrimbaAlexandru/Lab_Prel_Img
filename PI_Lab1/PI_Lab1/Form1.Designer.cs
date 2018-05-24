@@ -46,11 +46,12 @@
             this.btn_edit_menu_contour = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_edit_menu_Skeletization = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_edit_menu_shrinking = new System.Windows.Forms.ToolStripMenuItem();
-            this.oilPaintingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btn_menu_drunk_vision = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_edit_dilation = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_edit_erosion = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox_left = new System.Windows.Forms.PictureBox();
             this.pictureBox_right = new System.Windows.Forms.PictureBox();
-            this.btn_menu_edit_mirror = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_edit_deschidere = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_edit_inchidere = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_left)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_right)).BeginInit();
@@ -106,9 +107,10 @@
             this.btn_edit_menu_contour,
             this.btn_edit_menu_Skeletization,
             this.btn_edit_menu_shrinking,
-            this.oilPaintingToolStripMenuItem,
-            this.btn_menu_drunk_vision,
-            this.btn_menu_edit_mirror});
+            this.btn_edit_dilation,
+            this.btn_edit_erosion,
+            this.btn_edit_deschidere,
+            this.btn_edit_inchidere});
             this.menu_btn_edit.Name = "menu_btn_edit";
             this.menu_btn_edit.Size = new System.Drawing.Size(39, 20);
             this.menu_btn_edit.Text = "Edit";
@@ -204,19 +206,19 @@
             this.btn_edit_menu_shrinking.Text = "Thining";
             this.btn_edit_menu_shrinking.Click += new System.EventHandler(this.btn_edit_menu_shrinking_Click);
             // 
-            // oilPaintingToolStripMenuItem
+            // btn_edit_dilation
             // 
-            this.oilPaintingToolStripMenuItem.Name = "oilPaintingToolStripMenuItem";
-            this.oilPaintingToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
-            this.oilPaintingToolStripMenuItem.Text = "Oil Painting";
-            this.oilPaintingToolStripMenuItem.Click += new System.EventHandler(this.btn_edit_menu_oilPainting_click);
+            this.btn_edit_dilation.Name = "btn_edit_dilation";
+            this.btn_edit_dilation.Size = new System.Drawing.Size(258, 22);
+            this.btn_edit_dilation.Text = "Dilation";
+            this.btn_edit_dilation.Click += new System.EventHandler(this.btn_edit_dilation_Click);
             // 
-            // btn_menu_drunk_vision
+            // btn_edit_erosion
             // 
-            this.btn_menu_drunk_vision.Name = "btn_menu_drunk_vision";
-            this.btn_menu_drunk_vision.Size = new System.Drawing.Size(258, 22);
-            this.btn_menu_drunk_vision.Text = "Drunk Vision";
-            this.btn_menu_drunk_vision.Click += new System.EventHandler(this.btn_menu_drunk_vision_Click);
+            this.btn_edit_erosion.Name = "btn_edit_erosion";
+            this.btn_edit_erosion.Size = new System.Drawing.Size(258, 22);
+            this.btn_edit_erosion.Text = "Erosion";
+            this.btn_edit_erosion.Click += new System.EventHandler(this.btn_edit_erosion_Click);
             // 
             // pictureBox_left
             // 
@@ -234,12 +236,19 @@
             this.pictureBox_right.TabIndex = 2;
             this.pictureBox_right.TabStop = false;
             // 
-            // btn_menu_edit_mirror
+            // btn_edit_deschidere
             // 
-            this.btn_menu_edit_mirror.Name = "btn_menu_edit_mirror";
-            this.btn_menu_edit_mirror.Size = new System.Drawing.Size(258, 22);
-            this.btn_menu_edit_mirror.Text = "Mirror";
-            this.btn_menu_edit_mirror.Click += new System.EventHandler(this.btn_menu_edit_mirror_Click);
+            this.btn_edit_deschidere.Name = "btn_edit_deschidere";
+            this.btn_edit_deschidere.Size = new System.Drawing.Size(258, 22);
+            this.btn_edit_deschidere.Text = "Deschidere";
+            this.btn_edit_deschidere.Click += new System.EventHandler(this.btn_edit_deschidere_Click);
+            // 
+            // btn_edit_inchidere
+            // 
+            this.btn_edit_inchidere.Name = "btn_edit_inchidere";
+            this.btn_edit_inchidere.Size = new System.Drawing.Size(258, 22);
+            this.btn_edit_inchidere.Text = "Inchidere";
+            this.btn_edit_inchidere.Click += new System.EventHandler(this.btn_edit_inchidere_Click);
             // 
             // Form1
             // 
@@ -283,9 +292,10 @@
         private System.Windows.Forms.ToolStripMenuItem btn_edit_menu_contour;
         private System.Windows.Forms.ToolStripMenuItem btn_edit_menu_Skeletization;
         private System.Windows.Forms.ToolStripMenuItem btn_edit_menu_shrinking;
-        private System.Windows.Forms.ToolStripMenuItem oilPaintingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem btn_menu_drunk_vision;
-        private System.Windows.Forms.ToolStripMenuItem btn_menu_edit_mirror;
+        private System.Windows.Forms.ToolStripMenuItem btn_edit_dilation;
+        private System.Windows.Forms.ToolStripMenuItem btn_edit_erosion;
+        private System.Windows.Forms.ToolStripMenuItem btn_edit_deschidere;
+        private System.Windows.Forms.ToolStripMenuItem btn_edit_inchidere;
     }
 }
 

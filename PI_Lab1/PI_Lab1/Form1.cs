@@ -254,5 +254,33 @@ namespace PI_Lab1
             m.ShowDialog();
             apply_effect( m.getPreparedEffect() );
         }
+
+        private void btn_edit_dilation_Click( object sender, EventArgs e )
+        {
+            Dilation dil = new Dilation();
+            dil.setParameters( new int[ , ] { { 1, 0, 1 }, { 0, 1, 0 }, { 1, 0, 1 } }, 1, 1 );
+            apply_effect( dil );
+        }
+
+        private void btn_edit_erosion_Click( object sender, EventArgs e )
+        {
+            Erosion er = new Erosion();
+            er.setParameters( new int[ , ] { { 1, 0, 1 }, { 0, 1, 0 }, { 1, 0, 1 } }, 1, 1 );
+            apply_effect( er );
+        }
+
+        private void btn_edit_deschidere_Click( object sender, EventArgs e )
+        {
+            Deschidere d = new Deschidere();
+            d.setParameters( new int[ , ] { { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 }, { 0, 0, 1, 0, 0 }, { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 } }, 2, 2 );
+            apply_effect( d );
+        }
+
+        private void btn_edit_inchidere_Click( object sender, EventArgs e )
+        {
+            Inchidere i = new Inchidere();
+            i.setParameters( new int[ , ] { { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 }, { 0, 0, 1, 0, 0 }, { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 } }, 2, 2 );
+            apply_effect( i );
+        }
     }
 }
