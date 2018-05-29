@@ -48,10 +48,11 @@
             this.btn_edit_menu_shrinking = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_edit_dilation = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_edit_erosion = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox_left = new System.Windows.Forms.PictureBox();
-            this.pictureBox_right = new System.Windows.Forms.PictureBox();
             this.btn_edit_deschidere = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_edit_inchidere = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox_left = new System.Windows.Forms.PictureBox();
+            this.pictureBox_right = new System.Windows.Forms.PictureBox();
+            this.btn_edit_grad_morph = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_left)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_right)).BeginInit();
@@ -110,7 +111,8 @@
             this.btn_edit_dilation,
             this.btn_edit_erosion,
             this.btn_edit_deschidere,
-            this.btn_edit_inchidere});
+            this.btn_edit_inchidere,
+            this.btn_edit_grad_morph});
             this.menu_btn_edit.Name = "menu_btn_edit";
             this.menu_btn_edit.Size = new System.Drawing.Size(39, 20);
             this.menu_btn_edit.Text = "Edit";
@@ -220,6 +222,20 @@
             this.btn_edit_erosion.Text = "Erosion";
             this.btn_edit_erosion.Click += new System.EventHandler(this.btn_edit_erosion_Click);
             // 
+            // btn_edit_deschidere
+            // 
+            this.btn_edit_deschidere.Name = "btn_edit_deschidere";
+            this.btn_edit_deschidere.Size = new System.Drawing.Size(258, 22);
+            this.btn_edit_deschidere.Text = "Deschidere";
+            this.btn_edit_deschidere.Click += new System.EventHandler(this.btn_edit_deschidere_Click);
+            // 
+            // btn_edit_inchidere
+            // 
+            this.btn_edit_inchidere.Name = "btn_edit_inchidere";
+            this.btn_edit_inchidere.Size = new System.Drawing.Size(258, 22);
+            this.btn_edit_inchidere.Text = "Inchidere";
+            this.btn_edit_inchidere.Click += new System.EventHandler(this.btn_edit_inchidere_Click);
+            // 
             // pictureBox_left
             // 
             this.pictureBox_left.Location = new System.Drawing.Point(0, 25);
@@ -236,19 +252,12 @@
             this.pictureBox_right.TabIndex = 2;
             this.pictureBox_right.TabStop = false;
             // 
-            // btn_edit_deschidere
+            // btn_edit_grad_morph
             // 
-            this.btn_edit_deschidere.Name = "btn_edit_deschidere";
-            this.btn_edit_deschidere.Size = new System.Drawing.Size(258, 22);
-            this.btn_edit_deschidere.Text = "Deschidere";
-            this.btn_edit_deschidere.Click += new System.EventHandler(this.btn_edit_deschidere_Click);
-            // 
-            // btn_edit_inchidere
-            // 
-            this.btn_edit_inchidere.Name = "btn_edit_inchidere";
-            this.btn_edit_inchidere.Size = new System.Drawing.Size(258, 22);
-            this.btn_edit_inchidere.Text = "Inchidere";
-            this.btn_edit_inchidere.Click += new System.EventHandler(this.btn_edit_inchidere_Click);
+            this.btn_edit_grad_morph.Name = "btn_edit_grad_morph";
+            this.btn_edit_grad_morph.Size = new System.Drawing.Size(258, 22);
+            this.btn_edit_grad_morph.Text = "Morphological Gradient";
+            this.btn_edit_grad_morph.Click += new System.EventHandler(this.btn_edit_grad_morph_Click);
             // 
             // Form1
             // 
@@ -296,6 +305,7 @@
         private System.Windows.Forms.ToolStripMenuItem btn_edit_erosion;
         private System.Windows.Forms.ToolStripMenuItem btn_edit_deschidere;
         private System.Windows.Forms.ToolStripMenuItem btn_edit_inchidere;
+        private System.Windows.Forms.ToolStripMenuItem btn_edit_grad_morph;
     }
 }
 

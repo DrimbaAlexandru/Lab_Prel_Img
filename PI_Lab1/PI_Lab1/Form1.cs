@@ -282,5 +282,12 @@ namespace PI_Lab1
             i.setParameters( new int[ , ] { { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 }, { 0, 0, 1, 0, 0 }, { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 } }, 2, 2 );
             apply_effect( i );
         }
+
+        private void btn_edit_grad_morph_Click( object sender, EventArgs e )
+        {
+            MorphologicGradient gr = new MorphologicGradient();
+            gr.setParameters( new int[ , ] { { 1, 0, 1 }, { 0, 1, 0 }, { 1, 0, 1 } }, 1, 1 );
+            apply_effect( gr );
+        }
     }
 }

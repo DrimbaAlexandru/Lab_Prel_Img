@@ -62,6 +62,7 @@
     <Compile Include="Effects\Inchidere.cs" />
     <Compile Include="Effects\InvContScalStat.cs" />
     <Compile Include="Effects\Mirror.cs" />
+    <Compile Include="Effects\MorphologicGradient.cs" />
     <Compile Include="Effects\NoEffect.cs" />
     <Compile Include="Effects\OilPainting.cs" />
     <Compile Include="Effects\Pseudocolor.cs" />
